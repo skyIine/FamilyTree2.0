@@ -1,12 +1,7 @@
-<!-- nav -->
-<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
-    <div class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="/">Home</a>
-        <a class="nav-item nav-link" (click)="logout()">Logout</a>
-    </div>
-</nav>
-
-<!-- main app container -->
+<mat-toolbar color="primary" style="background-color: #9b6f0f;" *ngIf="currentUser">
+    <a mat-button color="primary" style="background-color: #278514; color: white; margin-left: 3%;"  routerLink="/">Home</a>
+    <a mat-button color="primary" style="background-color: #278514; color: white; margin-left: 3%;"(click)="logout()">Logout</a>
+</mat-toolbar>
 <div class="container">
     <router-outlet></router-outlet>
 </div>
