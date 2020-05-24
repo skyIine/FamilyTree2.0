@@ -21,6 +21,9 @@
                 <button class="loginButton" mat-raised-button  type="submit" (click)="login()">Log in</button>
                 <mat-spinner class="spinner" color="primary" diameter="40" *ngIf="loadSpinner"></mat-spinner>
             </div>
+            <div style="text-align: center; align-items: center; margin-left: auto; margin-right: auto; margin-top: 5%;">
+                <a mat-button routerLink="/registration" >Nie masz jeszcze konta? Zarejestruj się!</a>
+            </div>
             <div>
                 <div style="margin-top: 3%;" *ngIf="error" class="error">{{error}}</div>
             </div>

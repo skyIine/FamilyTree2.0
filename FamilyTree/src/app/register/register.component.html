@@ -1,1 +1,52 @@
-<p>register works!</p>
+<div class="container">
+    <mat-card class="registerBox" style="border-radius: 25px;">
+        <mat-card-title style="text-align: center; color: #277209; font-weight: 700;">Rejestracja</mat-card-title>
+        <div style="border-radius: 25px;">
+            <mat-form-field class="formFields" appearance="fill">
+                <mat-label style="color: #278514; font-weight: 700;">Nickname:</mat-label>
+                <input matInput [formControl]="nicknameFormControl"/>
+                <mat-error *ngIf="nicknameFormControl.hasError('required')">
+                    Nickname jest <strong>wymagany</strong>
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="formFields" appearance="fill">
+                <mat-label style="color: #278514; font-weight: 700;">E-mail:</mat-label>
+                <input matInput [formControl]="emailFormControl"/>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                    E-mail jest <strong>wymagany</strong>
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="formFields" appearance="fill">
+                <mat-label style="color: #278514; font-weight: 700;">Imię:</mat-label>
+                <input matInput [formControl]="firstnameFormControl"/>
+                <mat-error *ngIf="firstnameFormControl.hasError('required')">
+                    Imię jest <strong>wymagane</strong>
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="formFields" appearance="fill">
+                <mat-label style="color: #278514; font-weight: 700;">Nazwisko:</mat-label>
+                <input matInput [formControl]="lastnameFormControl"/>
+                <mat-error *ngIf="lastnameFormControl.hasError('required')">
+                    Nazwisko jest <strong>wymagane</strong>
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="formFields" appearance="fill" >
+                <mat-label style="color: #278514; font-weight: 700;">Hasło:</mat-label>
+                <input matInput type="password" [formControl]="passwordFormControl"/>
+                <mat-error *ngIf="passwordFormControl.hasError('required')">
+                    Hasło jest <strong>wymagane</strong>
+                </mat-error>
+            </mat-form-field>
+            <div style="margin-top: 3px; margin-right: auto; margin-left: auto; align-items: center; text-align: center;">
+                <button mat-raised-button  type="submit" (click)="register()">Zarejestruj się!</button>
+            </div>
+            <div style="margin-top: 3%; margin-right: auto; margin-left: auto; align-items: center; text-align: center;"> 
+                <a routerLink="/login">Wróć do logowania</a>
+            </div>
+        </div>
+  </mat-card>    
+</div>
